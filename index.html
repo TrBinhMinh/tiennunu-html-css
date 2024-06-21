@@ -1,136 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>The Basic Language of the Web: HTML</title>
-</head>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-<body>
-  <div class="container">
-    <header class="main-header clearfix">
-      <h1>📘 The Code Magazine</h1>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
-      <nav>
-        <a href="blog.html">Blog</a>
-        <a href="#">Challenges</a>
-        <a href="flexbox.html">Flexbox</a>
-        <a href="css-grid.html">CSS Grid</a>
+    <title>Omnifood</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Section 1</a></li>
+          <li><a class="main-nav-link" href="#">Section 2</a></li>
+          <li><a class="main-nav-link" href="#">Section 3</a></li>
+          <li><a class="main-nav-link" href="#">Section 4</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">Section 5</a></li>
+        </ul>
       </nav>
-
-      <!-- <div class="clear"></div> -->
     </header>
 
-    <!-- ONLY NECESSARY FOR FLEXBOX -->
-    <!-- <div class="row"> -->
-    <article>
-      <header class="post-header">
-        <h2>The Basic Language of the Web: HTML</h2>
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              A healthy meal delivered to your door, every single day
+            </h1>
+            <p class="hero-description">
+              The smart 365-days-per-year food subscription that will make you
+              eat healthy again. Tailored to your personal tastes and
+              nutritional needs.
+            </p>
+            <a href="#" class="btn btn--full margin-right-sm"
+              >Start eating well</a
+            >
+            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <div class="delivered-meals">
+              <div class="delivered-imgs">
+                <img src="img/customers/customer-1.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-2.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-3.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-4.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-5.jpg" alt="Customer photo" />
+                <img src="img/customers/customer-6.jpg" alt="Customer photo" />
+              </div>
+              <p class="delivered-text">
+                <span>250,000+</span> meals delivered last year!
+              </p>
+            </div>
+          </div>
+          <div class="hero-img-box">
+            <img
+              src="img/hero.png"
+              class="hero-img"
+              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+            />
+          </div>
+        </div>
+      </section>
 
-        <div class="author-box">
-          <img src="img/laura-jones.jpg" alt="Headshot of Laura Jones" width="50" height="50" class="author-img" />
+      <section class="section-featured">
+        <div class="container">
+          <h2 class="heading-featured-in">As featured in</h2>
+          <div class="logos">
+            <img src="img/logos/techcrunch.png" alt="Techcrunch logo" />
+            <img
+              src="img/logos/business-insider.png"
+              alt="Business Insider logo"
+            />
+            <img
+              src="img/logos/the-new-york-times.png"
+              alt="The New York Times logo"
+            />
+            <img src="img/logos/forbes.png" alt="Forbes logo" />
+            <img src="img/logos/usa-today.png" alt="USA Today logo" />
+          </div>
+        </div>
+      </section>
 
-          <p id="author" class="author">
-            Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
-          </p>
+      <section class="section-how">
+        <div class="container">
+          <span class="subheading">How it works</span>
+          <h2 class="heading-secondary">
+            Your daily dose of health in 3 simple steps
+          </h2>
         </div>
 
-        <img src="img/post-img.jpg" alt="HTML code on a screen" width="500" height="200" class="post-img" />
-        <button>❤️ Like</button>
-      </header>
-      <p>
-        All modern websites and web applications are built using three
-        <em>fundamental</em> technologies: HTML, CSS and JavaScript.These
-        are the languages of the web.
-      </p>
-
-      <p>
-        In this post, let's focus on HTML. We will learn what HTML is all
-        about, and why you too should learn it.
-      </p>
-
-      <h3>What is HTML?</h3>
-      <p>
-        HTML stands for <strong>H</strong>yper<strong>T</strong>ext
-        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
-        language that web developers use to structure and describe the
-        content of a webpage (not a programming language).
-      </p>
-      <p>
-        HTML consists of elements that describe different types of content:
-        paragraphs, links, headings, images, video, etc. Web browsers
-        understand HTML and render HTML code as websites.
-      </p>
-      <p>In HTML, each element is made up of 3 parts:</p>
-      <ol>
-        <li class="first-li">The opening tag</li>
-        <li>The closing tag</li>
-        <li>The actual element</li>
-      </ol>
-      <p>
-        You can learn more at the
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs</a>.
-      </p>
-
-      <h3>Why should you learn HTML?</h3>
-      <p>
-        There are countless reasons for learning the fundamental language of
-        the web. Here are 5 of them:
-      </p>
-
-      <ul>
-        <li class="first-li">
-          To be able to use the fundamental web dev language
-        </li>
-        <li>
-          To hand-craft beautiful websites instead of relying on tools like
-          Worpress or Wix
-        </li>
-        <li>To build web applications</li>
-        <li>To impress friends</li>
-        <li>To have fun 😃</li>
-      </ul>
-      <p>Hopefully you learned something new here. See you next time!</p>
-    </article>
-
-    <aside>
-      <h4>Related posts</h4>
-      <ul class="related">
-        <li class="related-post">
-          <img src="img/related-1.jpg" alt="Person programming" width="75" height="75" />
-          <div>
-            <a href="#" class="related-link">How to learn Web Development</a>
-            <p class="related-author">By Jonas Schmedtmann</p>
+        <div class="container grid grid--2-cols grid--center-v">
+          <!-- STEP 01 -->
+          <div class="step-text-box">
+            <p class="step-number">01</p>
+            <h3 class="heading-tertiary">
+              Tell us what you like (and what not)
+            </h3>
+            <p class="step-description">
+              Never again waste time thinking about what to eat! Omnifood AI
+              will create a 100% personalized weekly meal plan just for you. It
+              makes sure you get all the nutrients and vitamins you need, no
+              matter what diet you follow!
+            </p>
           </div>
-        </li>
 
-        <li class="related-post">
-          <img src="img/related-2.jpg" alt="Lightning" width="75" height="75" />
-          <div>
-            <a href="#" class="related-link">The Unknown Powers of CSS</a>
-            <p class="related-author">By Jim Dillon</p>
+          <div class="step-img-box">
+            <img
+              src="img/app/app-screen-1.png"
+              class="step-img"
+              alt="iPhone app preferences selection screen"
+            />
           </div>
-        </li>
 
-        <li class="related-post">
-          <img src="img/related-3.jpg" alt="JavaScript code on a screen" width="75" height="75" />
-          <div>
-            <a href="#" class="related-link">Why JavaScript is Awesome</a>
-            <p class="related-author">By Matilda</p>
+          <!-- STEP 02 -->
+          <div class="step-img-box">
+            <img
+              src="img/app/app-screen-2.png"
+              class="step-img"
+              alt="iPhone app meal approving plan screen"
+            />
           </div>
-        </li>
-      </ul>
-    </aside>
-    <!-- </div> -->
 
-    <footer>
-      <p id="copyright" class="copyright text">
-        Copyright &copy; 2027 by The Code Megazine.
-      </p>
-    </footer>
-  </div>
-</body>
+          <div class="step-text-box">
+            <p class="step-number">02</p>
+            <h3 class="heading-tertiary">Approve your weekly meal plan</h3>
+            <p class="step-description">
+              Once per week, approve the meal plan generated for you by Omnifood
+              AI. You can change ingredients, swap entire meals, or even add
+              your own recipes.
+            </p>
+          </div>
 
+          <!-- STEP 03 -->
+          <div class="step-text-box">
+            <p class="step-number">03</p>
+            <h3 class="heading-tertiary">Receive meals at convenient time</h3>
+            <p class="step-description">
+              Best chefs in town will cook your selected meal every day, and we
+              will deliver it to your door whenever works best for you. You can
+              change delivery schedule and address daily!
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="img/app/app-screen-3.png"
+              class="step-img"
+              alt="iPhone app delivery screen"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-meals">
+        <div class="container center-text">
+          <span class="subheading">Meals</span>
+          <h2 class="heading-secondary">
+            Omnifood AI chooses from 5,000+ recipes
+          </h2>
+        </div>
+
+        <div class="container grid grid--3-cols margin-bottom-md">
+          <div class="meal">
+            <img
+              src="img/meals/meal-1.jpg"
+              class="meal-img"
+              alt="Japanese Gyozas"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--vegetarian">Vegetarian</span>
+              </div>
+              <p class="meal-title">Japanese Gyozas</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>650</strong> calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon
+                    class="meal-icon"
+                    name="restaurant-outline"
+                  ></ion-icon>
+                  <span>NutriScore &reg; <strong>74</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.9</strong> rating (537)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="meal">
+            <img
+              src="img/meals/meal-2.jpg"
+              class="meal-img"
+              alt="Avocado Salad"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--vegan">Vegan</span>
+                <span class="tag tag--paleo">Paleo</span>
+              </div>
+              <p class="meal-title">Avocado Salad</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>400</strong> calories</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon
+                    class="meal-icon"
+                    name="restaurant-outline"
+                  ></ion-icon>
+                  <span>NutriScore &reg; <strong>92</strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> rating (441)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="diets">
+            <h3 class="heading-tertiary">Works with any diet:</h3>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Vegetarian</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Vegan</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Pescatarian</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Gluten-free</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Lactose-free</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Keto</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Paleo</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Low FODMAP</span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Kid-friendly</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container all-recipes">
+          <a href="#" class="link">See all recipes &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-testimonials grid grid--2-cols">
+        <div class="testimonials">
+          <figure class="testimonial">
+            <img
+              class="testimonial-img"
+              alt="Photo of customer Dave Bryson"
+              src="img/customers/dave.jpg"
+            />
+            <blockquote class="testimonial-text">
+              Inexpensive, healthy and great-tasting meals, without even having
+              to order manually! It feels truly magical.
+            </blockquote>
+            <p class="testimonial-name">&mdash; Dave Bryson</p>
+          </figure>
+
+          <figure class="testimonial">
+            <img
+              class="testimonial-img"
+              alt="Photo of customer Ben Hadley"
+              src="img/customers/ben.jpg"
+            />
+            <blockquote class="testimonial-text">
+              The AI algorithm is crazy good, it chooses the right meals for me
+              every time. It's amazing not to worry about food anymore!
+            </blockquote>
+            <p class="testimonial-name">&mdash; Ben Hadley</p>
+          </figure>
+
+          <figure class="testimonial">
+            <img
+              class="testimonial-img"
+              alt="Photo of customer Steve Miller"
+              src="img/customers/steve.jpg"
+            />
+            <blockquote class="testimonial-text">
+              Omnifood is a life saver! I just started a company, so there's no
+              time for cooking. I couldn't live without my daily meals now!
+            </blockquote>
+            <p class="testimonial-name">&mdash; Steve Miller</p>
+          </figure>
+
+          <figure class="testimonial">
+            <img
+              class="testimonial-img"
+              alt="Photo of customer Hannah Smith"
+              src="img/customers/hannah.jpg"
+            />
+            <blockquote class="testimonial-text">
+              I got Omnifood for the whole family, and it frees up so much time!
+              Plus, everything is organic and vegan and without plastic.
+            </blockquote>
+            <p class="testimonial-name">&mdash; Hannah Smith</p>
+          </figure>
+        </div>
+        <div class="gallery">Gallery</div>
+      </section>
+    </main>
+  </body>
 </html>
